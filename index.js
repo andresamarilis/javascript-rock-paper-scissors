@@ -22,14 +22,14 @@ console.log(getUserChoice('Paper'));
 
 
 
-//New function with a variable called getComputerChoice that has no parameters. Computer will select a random value (0 - 2). Each value has been assigned with either rock,paper, or scissors. 
+//New function with a variable called getComputerChoice that has no parameters. Computer will select a random number value (0 - 2). Each number value has been assigned with either rock,paper, or scissors. 
 const getComputerChoice = () => {
     //1)Math.random() function gives a random number in float form e.g. 0.90607088140251
     //2) Random number is multiplied by 3. e.g. 1.0129007077496839
     //3) The Math.floor() function rounds the random float number that has been multiplied by 3 to the nearest whole number.
     const randomNumber = Math.floor(Math.random() * 3);
 
-
+    //The randomised whole number value = either rock, paper, or scissors, depending on its number value. 
     switch (randomNumber) {
         case 0:
             return 'rock';
