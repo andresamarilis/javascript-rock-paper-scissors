@@ -5,7 +5,7 @@ const getUserChoice = (userInput) => {
     //makes all input into lowercase
     userInput = userInput.toLowerCase();
 
-    // checks to see if user input is rock, paper, or scissors. It not, then display error. 
+    // checks to see if user input is rock, paper, or scissors. If not, then display error. 
     if (userInput === 'rock' || userInput === 'paper' || userInput === 'scissors') {
         return userInput;
     }
