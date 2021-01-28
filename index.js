@@ -15,12 +15,6 @@ const getUserChoice = (userInput) => {
 
 }
 
-// Calls the function. Has 'paper' as its value. 
-console.log(getUserChoice('Paper'));
-
-
-
-
 
 //New function with a variable called getComputerChoice that has no parameters. Computer will select a random number value (0 - 2). Each number value has been assigned with either rock,paper, or scissors. 
 const getComputerChoice = () => {
@@ -44,11 +38,69 @@ const getComputerChoice = () => {
 
 const determineWinner = (userChoice, computerChoice) => {
 
-   if (userChoice === computerChoice) {
+    if (userChoice === computerChoice) {
 
-    return "The game is a tie"; 
+        return "This game is a tie!";
+    }
 
-   }
-      
+
+
+
+    if (userChoice === "rock") {
+
+        if (computerChoice === "paper") {
+            return "Computer has won!";
+        } else {
+            return "You have won!";
+        }
+
+    }
+
+
+
+
+    if (userChoice === "paper") {
+
+        if (computerChoice === "scissors") {
+            return "Computer has won!";
+        } else {
+            return "You have won!";
+        }
+
+    }
+
+
+
+
+
+    if (userChoice === "scissors") {
+
+        if (computerChoice === "rock") {
+            return "Computer has won!";
+        } else {
+            return "You have won!";
+        }
+
+    }
+
 
 }
+
+
+const playGame = () => {
+    const userChoice = getUserChoice('paper');
+    const computerChoice = getComputerChoice();
+    console.log("You threw " + userChoice);
+    console.log("The computer threw " + computerChoice);
+
+    console.log(determineWinner(userChoice, computerChoice));
+
+}
+
+playGame()
+
+
+
+
+
+
